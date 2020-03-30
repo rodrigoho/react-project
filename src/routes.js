@@ -9,7 +9,9 @@ export default function Routes() {
     <BrowserRouter>
       <Switch>
         <Route path="/" exact component={Main} />
-        <Route path="/repository" component={Repository} />
+
+        {/* /:repository means that it will be passed by it's parent */}
+        <Route path="/repository/:repository" component={Repository} />
       </Switch>
     </BrowserRouter>
   );
